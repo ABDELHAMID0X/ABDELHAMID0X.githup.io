@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mainspin.css">
+</head>
+<body>
+<button id="spin">spin</button>  
+<span class="arrow"></span>
+<h2>lucky draw</h2>
+<div class="choix">
+    <h1>entrer votre choix</h1>
+    <button id="slow">slow</button>
+    <button id="fast">fast</button>
+</div>
+<div class="container">
+    <div class="one">HAMID</div>
+    <div class="two">ISAMIL</div>
+    <div class="three">STEZY</div>
+    <div class="four">ISMAIL</div>
+    <div class="five">AGAIN</div>
+    <div class="six">STEZY</div>
+    <div class="seven">AGAIN</div>
+    <div class="eight">HAMID</div>
+</div>
+
+
+<script>
+
+    let container =document.querySelector(".container");
+    let btn = document.getElementById("spin");
+    let slow = document.getElementById("slow");
+    let fast = document.getElementById("fast");
+    let number = Math.ceil(Math.random()*0);
+    slow.onclick=function(){   
+        btn.onclick = function(){
+        container.style.transform="rotate("+number+"deg)"
+        number+=Math.ceil(Math.random()*1000);
+        }
+    }
+    fast.onclick=function(){
+        btn.onclick = function(){
+        container.style.transform="rotate("+number+"deg)"
+        number+=Math.ceil(Math.random()*8000);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
